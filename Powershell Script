@@ -1,0 +1,6 @@
+//Replace part of a String in multiple files
+Get-ChildItem *_pt_*| Rename-Item -NewName { $_.Name -Replace '_pt_','_at_' }
+
+Start-Sleep -s 10
+Get-Service | where {$_.Name -like "S*"}
+Get-Service | where {$_.DisplayName -like "*S*"}
